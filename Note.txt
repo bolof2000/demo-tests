@@ -19,5 +19,4 @@ Restart the Jenkins service: brew services restart jenkins-lts
 Update the Jenkins version: brew upgrade jenkins-lts
 
 
-sudo cat /Users/$(whoami)/.jenkins/secrets/initialAdminPassword
-
+8b4198867f54400e9b312bee1363bf61
