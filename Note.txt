@@ -1,0 +1,23 @@
+
+docker pull selenium/standalone-chrome:latest
+docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome:latest
+
+running tests on grid using docker
+- create docker-compose file which contains configuration for the hubs and the nodes
+to run:  run docker-compose.yml
+docker-compose up
+
+
+brew install jenkins-lts
+
+
+Sample commands:
+Install the latest LTS version: brew install jenkins-lts
+Install a specific LTS version: brew install jenkins-lts@YOUR_VERSION
+Start the Jenkins service: brew services start jenkins-lts
+Restart the Jenkins service: brew services restart jenkins-lts
+Update the Jenkins version: brew upgrade jenkins-lts
+
+
+sudo cat /Users/$(whoami)/.jenkins/secrets/initialAdminPassword
+
