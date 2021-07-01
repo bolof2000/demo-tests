@@ -20,3 +20,56 @@ Update the Jenkins version: brew upgrade jenkins-lts
 
 
 8b4198867f54400e9b312bee1363bf61
+
+docker pull image_name
+docker image -a
+docker run image_name
+docker run -p port:port image_id
+docker ps - see running containers
+docker inspect image_id
+docker logs container_id
+docker stop container_id
+docker start container_id
+docker kill container_id
+docker exec   - execute commands inside your container
+docker exec -it  container_id commands to execute
+example :
+docker exec -it container_id bash
+
+apk add tree  - install tree packge inside your container
+
+docker commit container_id  bolof2000/ImageName    -- make a custom image
+
+docker export --output  filename --- export your containsers so you can share with others
+docker login -u username -p password  - login to your docker registry
+docker build -t name Dockerfile
+docker rm container__id
+docker rmi image_id
+
+docker-compose -f filename up   bring up multiple services in a single file instructions
+docker-compose -f filename down
+
+Services
+Node Port
+Cluster Ip internal IP for services
+Load Balancer
+Load Balancer service to expose your service to external access
+Nodeport :
+
+statefulset : for stateful applications - like DB  example is service registry
+headless service - a cluster IP without an IP address.
+deployment :
+
+
+lsof -n -i4TCP:8080
+
+docker run -p 8181:8181 -p 50000:50000 jenkins/jenkins:lts-jdk11
+
+docker run -p 8181:8181 -p 50000:50000 -v jenkins_home:/Volumes/dev-env/jenkins_home jenkins/jenkins:lts-jdk11
+
+jenkins password:  0f32a91d01014134b3c4e3315519d5fb
+This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+
+java -jar agent.jar -jnlpUrl http://localhost:8080/computer/docker4/slave-agent.jnlp -secret @secret-file -workDir "/Users/bolof/Documents/jenkins01"
+
+docker-compose up
