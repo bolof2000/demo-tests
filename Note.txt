@@ -73,3 +73,7 @@ This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
 java -jar agent.jar -jnlpUrl http://localhost:8080/computer/docker4/slave-agent.jnlp -secret @secret-file -workDir "/Users/bolof/Documents/jenkins01"
 
 docker-compose up
+
+ssh-keygen -t rsa -b 2048 -C "comment"
+
+
